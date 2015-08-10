@@ -441,30 +441,6 @@ li {
 }
 
 
-/*
-  CSS ANIMATION FOR SWIPING...
-*/
-
-@-webkit-keyframes demo {
-    0% {
-        left: 0px;
-    }
-    50% {
-        left: 1000px;
-    }
-    51% {
-        left: -1000px;
-    }
-    100% {
-        left: 0px;
-    }
-}
-
-.demo {
-    -webkit-animation-name: demo;
-    -webkit-animation-duration: 900ms;
-}
-
 
 
 

@@ -23,6 +23,7 @@ angular.module("nodeTodo", ['ngTouch'])
 
     $scope.web_portfolio = [
         {
+            'name'          : 'arbitrage_landing',
             'url'           : 'http://i.imgur.com/6glD8Yj.jpg',
             'pos'           : '0% 0%',
             'size'          : 'cover',
@@ -35,6 +36,7 @@ angular.module("nodeTodo", ['ngTouch'])
         },
         {
             'url'           : 'http://i.imgur.com/WdR9k3Z.jpg',
+            'name'          : 'arbitrage_video',
             'pos'           : '0% 0%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -46,6 +48,7 @@ angular.module("nodeTodo", ['ngTouch'])
         },
         {
             'url'           : 'http://i.imgur.com/8h4WB0j.jpg',
+            'name'          : 'workable',
             'pos'           : '50% 80%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -57,6 +60,7 @@ angular.module("nodeTodo", ['ngTouch'])
         },
         {
             'url'           : 'http://i.imgur.com/WgwHekG.jpg',
+            'name'          : 'cities',
             'pos'           : '70% 10%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -68,6 +72,7 @@ angular.module("nodeTodo", ['ngTouch'])
         },
         {
             'url'           : 'http://i.imgur.com/HEQwfJh.jpg',
+            'name'          : 'simpletext',
             'pos'           : '0% 90%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -79,6 +84,7 @@ angular.module("nodeTodo", ['ngTouch'])
         },
         {
             'url'           : 'http://i.imgur.com/fbxzsfC.jpg',
+            'name'          : 'breezethru',
             'pos'           : '50% 0%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -92,6 +98,7 @@ angular.module("nodeTodo", ['ngTouch'])
 
     $scope.paintings = [
         {
+            'name'          : 'horse',
             'url'           : 'http://i.imgur.com/EjVuFBG.jpg',
             'large_url'     : 'http://i.imgur.com/J0pmOlV.jpg',
             'pos'           : '35% 50%',
@@ -103,6 +110,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'self_portrait_sweatshirt',
             'url'           : 'http://i.imgur.com/mmPXY5K.jpg',
             'large_url'     : 'http://i.imgur.com/KuEXstZ.jpg',
             'pos'           : '60% 0%',
@@ -114,6 +122,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'stare',
             'url'           : 'http://i.imgur.com/tBb7DqK.jpg',
             'large_url'     : 'http://i.imgur.com/FKWppbH.jpg',
             'pos'           : '72% 10%',
@@ -124,6 +133,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'woman_reclining',
             'url'           : 'http://i.imgur.com/305hKYm.jpg',
             'large_url'     : 'http://i.imgur.com/fOAzpfB.jpg',
             'pos'           : '85% 50%',
@@ -135,6 +145,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'ladyagnew',
             'url'           : 'http://i.imgur.com/XZfwxVF.jpg',
             'large_url'     : 'http://i.imgur.com/syfP0P1.jpg',
             'pos'           : '50% 10%',
@@ -146,6 +157,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'emma_sneakers',
             'url'           : 'http://i.imgur.com/CcZT8Cl.jpg',
             'large_url'     : 'http://i.imgur.com/9wPWxQS.jpg',
             'pos'           : '60% 80%',
@@ -156,6 +168,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'elephants',
             'url'           : 'http://i.imgur.com/BCzBsAU.jpg',
             'large_url'     : 'http://i.imgur.com/fm3ww0e.jpg',
             'pos'           : '26% 40%',
@@ -166,6 +179,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'track',
             'url'           : 'http://i.imgur.com/OYVgtlN.jpg',
             'large_url'     : 'http://i.imgur.com/d8hOhtf.jpg',
             'pos'           : '80% 20%',
@@ -176,6 +190,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'emma',
             'url'           : 'http://i.imgur.com/D4X72kU.jpg',
             'large_url'     : 'http://i.imgur.com/qBKO2GS.jpg',
             'pos'           : '35% 43%',
@@ -187,6 +202,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'self_portrait_old',
             'url'           : 'http://i.imgur.com/263b7TP.jpg',
             'large_url'     : 'http://i.imgur.com/zlSq7Dk.jpg',
             'pos'           : '40% 100%',
@@ -198,6 +214,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'dream_catcher_earrings',
             'url'           : 'http://i.imgur.com/o7g3Mj4.jpg',
             'large_url'     : 'http://i.imgur.com/Sdi2375.jpg',
             'pos'           : '40% 65%',
@@ -209,6 +226,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'sailor',
             'url'           : 'http://i.imgur.com/1lHx1q7.jpg',
             'large_url'     : 'http://i.imgur.com/AUbSjGX.jpg',
             'pos'           : '70% 32%',
@@ -223,6 +241,7 @@ angular.module("nodeTodo", ['ngTouch'])
 
     $scope.images = [
         {
+            'name'          : 'lizard',
             'url'           : 'http://i.imgur.com/KvBXvH1.jpg',
             'pos'           : '25% 20%',
             'size'          : 'cover',
@@ -232,6 +251,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'coins',
             'url'           : 'http://i.imgur.com/PNU1CK2.jpg',
             'pos'           : '12% 80%',
             'size'          : 'cover',
@@ -241,6 +261,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'keyboard',
             'url'           : 'http://i.imgur.com/IKTvzyE.jpg',
             'pos'           : '90% 80%',
             'size'          : 'cover',
@@ -250,6 +271,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'wooden_room',
             'url'           : 'http://i.imgur.com/lG0RfGv.jpg',
             'pos'           : '100% 80%',
             'size'          : 'cover',
@@ -259,6 +281,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
+            'name'          : 'table',
             'url'           : 'http://i.imgur.com/OrJraur.jpg',
             'large_url'     : 'http://i.imgur.com/vcbx2ec.jpg',
             'pos'           : '35% 30%',
@@ -269,6 +292,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2013'
         },
         {
+            'name'          : 'guitar',
             'url'           : 'http://i.imgur.com/VuAo5o6.jpg',
             'large_url'     : 'http://i.imgur.com/GvhYAUm.jpg',
             'pos'           : '30% 60%',
