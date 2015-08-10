@@ -9,6 +9,9 @@ var routes = require('./server/routes/index');
 
 var app = express();
 
+
+var port = process.env.PORT || 5000;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -54,5 +57,9 @@ app.use(function(err, req, res, next) {
   });
 });
 
+
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
 
 module.exports = app;
