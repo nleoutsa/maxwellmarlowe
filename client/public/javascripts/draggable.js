@@ -3,7 +3,6 @@ var offset = null;
 var position_0 = null;
 var position_1 = null;
 var relative_pos;
-var timer;
 
 // used to establish the offset amount
 var startTouch = function(e) {
@@ -23,22 +22,17 @@ var startTouch = function(e) {
 
 // move a draggable element
 var moveElement = function(e) {
+
+    // get initial position to calculate throw velocity and easing curve...
     pos_0 = $(this).position();
 
     // prevent scrolling on touch events that occur within zoom_description
     var is_zoomed_description = e.originalEvent.target.id == "zoomed_description" || e.originalEvent.target.parentNode.id == "zoomed_description";
-
     if (!is_zoomed_description) {
-        console.log('true');
         e.preventDefault();
     }
 
     user_position_x = e.originalEvent.changedTouches[0].pageX;
-    user_position_y = e.originalEvent.changedTouches[0].pageY;
-
-    relative_pos = (pos_0.left + ($(this).width() / 2)) / $(this).width() - 0.5;
-    // get position relative to center of screen...
-    console.log(relative_pos);
 
     var new_left = user_position_x - offset.x;
 
@@ -52,6 +46,7 @@ var moveElement = function(e) {
         transition       : 'none'
     });
 
+    // get final position to calculate throw velocity and easing curve...
     pos_1 = $(this).position();
 
 };
@@ -60,51 +55,41 @@ var moveElement = function(e) {
 var throwElement = function(e) {
 
     user_position_x = e.originalEvent.changedTouches[0].pageX;
-    user_position_y = e.originalEvent.changedTouches[0].pageY;
 
-    var ease_amount_left = 1 / (pos_1.left > pos_0.left ? pos_1.left / pos_0.left : pos_0.left / pos_1.left);
-    // var ease_amount_top = 1 / (pos_1.top > pos_0.top ? pos_1.top / pos_0.top : pos_0.top / pos_1.top);
 
-    if (relative_pos > 0.25) {
+    var ease_amount_left = (pos_1.left > pos_0.left ? pos_1.left / pos_0.left : pos_0.left / pos_1.left);
+
+    var relative_pos = $(this).position().left / $(this).width();
+
+    var throw_speed =  (300 -  100 * (relative_pos * relative_pos));// - Math.abs(1000 * relative_pos);
+
+    var window_width = $(window).width();
+
+    console.log(pos_0, pos_1);
+
+    if (pos_0.left < pos_1.left && relative_pos > 0.1) {
         console.log('last');
 
-        angular.element('#mainController').scope().showPhoto(-1);
-        angular.element('#mainController').scope().$apply();
+        $(this).animate({left: 1.5 * window_width}, throw_speed,'linear', function() {
+            angular.element('#mainController').scope().showPhoto(-1);
+            angular.element('#mainController').scope().$apply();
+        });
+        $(this).animate({left: -1.5 * window_width},0,'linear');
+        $(this).animate({left: 0}, throw_speed,'linear');
 
-        // move to opposite side and offscreen
-        $(this).offset({left: -1000 });
 
-        if ($(this).position().left < 900) {
-            $(this).css({
-                left: 0,
-                WebkitTransition : 'left ' + ease_amount_left + 's cubic-bezier(0.130, 1.000, 0.320, 1.000)',
-                MozTransition    : 'left ' + ease_amount_left + 's cubic-bezier(0.130, 1.000, 0.320, 1.000)',
-                MsTransition     : 'left ' + ease_amount_left + 's cubic-bezier(0.130, 1.000, 0.320, 1.000)',
-                OTransition      : 'left ' + ease_amount_left + 's cubic-bezier(0.130, 1.000, 0.320, 1.000)',
-                transition       : 'left ' + ease_amount_left + 's cubic-bezier(0.130, 1.000, 0.320, 1.000)'
-            });
-        }
     }
-    else if (relative_pos < -0.25) {
-
+    else if (pos_0.left > pos_1.left && relative_pos < -0.1) {
         console.log('next');
 
-        angular.element('#mainController').scope().showPhoto(1);
-        angular.element('#mainController').scope().$apply();
+        $(this).animate({left: -1.5 * window_width}, throw_speed,'linear', function() {
+            angular.element('#mainController').scope().showPhoto(1);
+            angular.element('#mainController').scope().$apply();
+        });
+        $(this).animate({left: 1.5 * window_width},0,'linear');
+        $(this).animate({left: 0}, throw_speed,'linear');
 
-        // move to opposite side and offscreen
-        $(this).offset({left: 1000 });
 
-        if ($(this).position().left > 900) {
-            $(this).css({
-                left: 0,
-                WebkitTransition : 'left ' + ease_amount_left + 's cubic-bezier(0.130, 1.000, 0.320, 1.000)',
-                MozTransition    : 'left ' + ease_amount_left + 's cubic-bezier(0.130, 1.000, 0.320, 1.000)',
-                MsTransition     : 'left ' + ease_amount_left + 's cubic-bezier(0.130, 1.000, 0.320, 1.000)',
-                OTransition      : 'left ' + ease_amount_left + 's cubic-bezier(0.130, 1.000, 0.320, 1.000)',
-                transition       : 'left ' + ease_amount_left + 's cubic-bezier(0.130, 1.000, 0.320, 1.000)'
-            });
-        }
     }
     else {
         $(this).css({
@@ -117,67 +102,131 @@ var throwElement = function(e) {
         });
     }
 
-    relative_pos = 0;
-
-
-
 };
 
 
 var autoMove = function(id) {
 
-    // determine if panels move horizontally or vertically by window size...
-    if ($(window).width() <= 500) {
+    var paused = false;
+    var num_of_pics = ($(id).children().length);
+    var timer;
 
-        var paused;
-        var num_of_pics = ($(id).children().length);
-        var column_width = $(id).width() - $(window).width();
-        var auto_move_direction;
-        var new_left = 0;
+    var new_left;
+    var new_top;
 
-        if ($(id).position().left > column_width / 2) {
-            auto_move_direction = -1;
-        }
-        else {
-            auto_move_direction = 1;
-        }
+    var auto_move_direction_left;
+    var auto_move_direction_top;
+
+    var row_width = $(id).width() - $(window).width() - 15;
+    var column_height = $(id).height() - $(window).height() - 15;
+
+    if ($(id).position().left > row_width / 2) {
+        auto_move_direction_left = -1;
+    }
+    else {
+        auto_move_direction_left = 1;
+    }
+
+    if ($(id).position().top > column_height / 2) {
+        auto_move_direction_top = -1;
+    }
+    else {
+        auto_move_direction_top = 1;
+    }
+
 
         timer = setInterval(function () {
 
-            // switch direction at each end
-            if ($(id).position().left <= -column_width || $(id).position().left >= 0) {
-                auto_move_direction *= -1;
+            if ($(window).width() <= 500) {
+
+                row_width = $(id).width() - $(window).width();
+
+                // switch direction at each end
+                if ($(id).position().left <= -row_width || $(id).position().left >= 0) {
+                    auto_move_direction_left *= -1;
+                }
+
+                new_left = $(id).position().left + (1 * auto_move_direction_left);
+
+                if (!paused) {
+                    $(id).parent().scrollLeft(-new_left);
+                }
+            }
+            else if ($(window).width() > 500) {
+
+                column_height = $(id).height() - $(window).height();
+
+                // switch direction at each end
+                if ($(id).position().top <= -column_height || $(id).position().top >= 0) {
+                    auto_move_direction_top *= -1;
+                }
+
+                new_top = $(id).position().top + (1 * auto_move_direction_top);
+
+
+
+                if (!paused) {
+                    $(id).parent().scrollTop(-new_top);
+                }
             }
 
-            new_left = $(id).position().left + (1 * auto_move_direction);
-
-            var scroll_amount = $(id).parent().scrollLeft();
-
-            if (!paused) {
-                $(id).parent().scrollLeft(-new_left);
-            }
-
-        }, 100);
+        }, 30);
 
 
-
-
-        $(id).parent().on('touchstart', function(e) {
+    // pause auto scroll when zoomed
+    $('.pic').bind('click touchstart', function() {
+        if (angular.element('#mainController').scope().zoom) {
             paused = true;
-        });
-        $(id).parent().on('touchend', function(e) {
-            paused = false;
-        });
+        }
+    });
+
+    // unpause autoscroll when not zoomed
+    $('#x-out').bind('click touchstart', function() {
+        paused = false;
+    });
 
 
-    }
+    // pause autoscroll when user scrolls,
+    // unpause a few seconds after user stops scrolling iff not zoomed
+    var timeout;
+
+    $(id).parent().on('touchstart', function(e) {
+        paused = true;
+        clearTimeout(timeout);
+    });
+    $(id).parent().on('touchend', function(e) {
+        timeout = setTimeout(function() {
+            if (!angular.element('#mainController').scope().zoom) {
+                paused = false;
+            }
+        }, 3000);
+    });
+
+
 
 };
 
 
-autoMove("#col0");
-autoMove("#col2");
-autoMove("#col3");
+
+
+
+// run on load:
+
+
+// window.addEventListener("orientationchange", function() {
+    // on orientation change do this...
+// }, false);
+
+
+setTimeout(function() {
+    autoMove("#col2");
+}, 2000);
+setTimeout(function() {
+    autoMove("#col0");
+}, 4000);
+setTimeout(function() {
+    autoMove("#col3");
+}, 6000);
 
 $('.draggable').bind('touchstart', startTouch);
 $('.draggable').bind('touchmove', moveElement);
@@ -189,18 +238,14 @@ $('.draggable').bind('touchend', throwElement);
 
 // TODO:
 
-// on super_zoom: swipe right-to-left
-// is going back and forth instead of forward
-// each time
+// make photos smaller for mobile... larger for large screen...
+// css @media for larger screen size
+//      or (? more robust machine)*--are these even possible?
+//      or (? faster internet connect) *
+//
 
 // style buttons of side: color; positioning?;
 
-// autoscroll vertical!
-
-// flashing ghost image occurs during
-// scroll momentum on main page...
-// Possibly autoMove AND user's scroll momentum
-// are clashing
 
 
 

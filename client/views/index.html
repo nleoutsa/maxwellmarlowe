@@ -17,11 +17,11 @@
 
 
       <div ng-show="zoom" id="zoomed" >
-
-        <div id="super_zoomed_container" ng-show="super_zoom" ng-click="super_zoom = false" >
-          <img class="draggable" id="super_zoomed_pic" src="{{album[pic_number].large_url || album[pic_number].large_url}}">
+        <div id="super_zoomed_background" ng-show="super_zoom" ng-click="super_zoom = false">
+          <div class="draggable" id="super_zoomed_container" >
+            <img id="super_zoomed_pic" ng-src="{{album[pic_number].large_url || album[pic_number].url}}">
+          </div>
         </div>
-
         <div class="draggable" id="zoomed_container">
 
           <img id="zoomed_pic" ng-src="{{album[pic_number].url}}" ng-click="super_zoom = true">

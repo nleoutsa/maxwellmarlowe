@@ -23,8 +23,7 @@ angular.module("nodeTodo", ['ngTouch'])
 
     $scope.web_portfolio = [
         {
-            'url'           : 'http://i.imgur.com/oIXp6ql.png',
-            'large_url'           : 'http://i.imgur.com/oIXp6ql.png',
+            'url'           : 'http://i.imgur.com/6glD8Yj.jpg',
             'pos'           : '0% 0%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -35,8 +34,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2015'
         },
         {
-            'url'           : 'http://i.imgur.com/h86kWQE.png',
-            'large_url'           : 'http://i.imgur.com/h86kWQE.png',
+            'url'           : 'http://i.imgur.com/WdR9k3Z.jpg',
             'pos'           : '0% 0%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -47,8 +45,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2015'
         },
         {
-            'url'           : 'http://i.imgur.com/tCc7ggv.png',
-            'large_url'           : 'http://i.imgur.com/tCc7ggv.png',
+            'url'           : 'http://i.imgur.com/8h4WB0j.jpg',
             'pos'           : '50% 80%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -59,8 +56,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2015'
         },
         {
-            'url'           : 'http://i.imgur.com/gT4duG8.png',
-            'large_url'           : 'http://i.imgur.com/gT4duG8.png',
+            'url'           : 'http://i.imgur.com/WgwHekG.jpg',
             'pos'           : '70% 10%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -71,8 +67,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/GwzGavY.png',
-            'large_url'           : 'http://i.imgur.com/GwzGavY.png',
+            'url'           : 'http://i.imgur.com/HEQwfJh.jpg',
             'pos'           : '0% 90%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -83,8 +78,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/DyldGCZ.png',
-            'large_url'           : 'http://i.imgur.com/DyldGCZ.png',
+            'url'           : 'http://i.imgur.com/fbxzsfC.jpg',
             'pos'           : '50% 0%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -98,8 +92,8 @@ angular.module("nodeTodo", ['ngTouch'])
 
     $scope.paintings = [
         {
-            'url'           : 'http://i.imgur.com/wiu9cFk.jpg',
-            'large_url'     : 'http://i.imgur.com/zWgROSR.jpg',
+            'url'           : 'http://i.imgur.com/EjVuFBG.jpg',
+            'large_url'     : 'http://i.imgur.com/J0pmOlV.jpg',
             'pos'           : '35% 50%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -109,19 +103,19 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/TJ7YEjs.jpg',
-            'large_url'     : 'http://i.imgur.com/OomnPqj.jpg',
+            'url'           : 'http://i.imgur.com/mmPXY5K.jpg',
+            'large_url'     : 'http://i.imgur.com/KuEXstZ.jpg',
             'pos'           : '60% 0%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
-            'title'         : 'Self Portrait',
+            'title'         : 'Self Portrait in Green',
             'description'   : '24\" X 36\"',
             'medium'        : 'Oil on Canvas',
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/kutJzmS.jpg',
-            'large_url'     : 'http://i.imgur.com/KUToClf.jpg',
+            'url'           : 'http://i.imgur.com/tBb7DqK.jpg',
+            'large_url'     : 'http://i.imgur.com/FKWppbH.jpg',
             'pos'           : '72% 10%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -130,8 +124,8 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/76xH6od.jpg',
-            'large_url'     : 'http://i.imgur.com/OloKvol.jpg',
+            'url'           : 'http://i.imgur.com/305hKYm.jpg',
+            'large_url'     : 'http://i.imgur.com/fOAzpfB.jpg',
             'pos'           : '85% 50%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -141,8 +135,8 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/TFkftVq.jpg',
-            'large_url'     : 'http://i.imgur.com/9maRLyU.jpg',
+            'url'           : 'http://i.imgur.com/XZfwxVF.jpg',
+            'large_url'     : 'http://i.imgur.com/syfP0P1.jpg',
             'pos'           : '50% 10%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -152,8 +146,8 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/xnv5NqD.jpg',
-            'large_url'     : 'http://i.imgur.com/CldKYyx.jpg',
+            'url'           : 'http://i.imgur.com/CcZT8Cl.jpg',
+            'large_url'     : 'http://i.imgur.com/9wPWxQS.jpg',
             'pos'           : '60% 80%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -162,8 +156,8 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/EQOvgXu.jpg',
-            'large_url'     : 'http://i.imgur.com/tdeUIHo.jpg',
+            'url'           : 'http://i.imgur.com/BCzBsAU.jpg',
+            'large_url'     : 'http://i.imgur.com/fm3ww0e.jpg',
             'pos'           : '26% 40%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -172,8 +166,8 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/09m22VZ.jpg',
-            'large_url'     : 'http://i.imgur.com/otu2cw5.jpg',
+            'url'           : 'http://i.imgur.com/OYVgtlN.jpg',
+            'large_url'     : 'http://i.imgur.com/d8hOhtf.jpg',
             'pos'           : '80% 20%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -182,8 +176,8 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/YiVlgnF.jpg',
-            'large_url'     : 'http://i.imgur.com/g0kft5L.jpg',
+            'url'           : 'http://i.imgur.com/D4X72kU.jpg',
+            'large_url'     : 'http://i.imgur.com/qBKO2GS.jpg',
             'pos'           : '35% 43%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -193,8 +187,8 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/ga60NEv.jpg',
-            'large_url'     : 'http://i.imgur.com/01NDp9x.jpg',
+            'url'           : 'http://i.imgur.com/263b7TP.jpg',
+            'large_url'     : 'http://i.imgur.com/zlSq7Dk.jpg',
             'pos'           : '40% 100%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -204,8 +198,8 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/Pzz6Ded.jpg',
-            'large_url'     : 'http://i.imgur.com/QBdi0eF.jpg',
+            'url'           : 'http://i.imgur.com/o7g3Mj4.jpg',
+            'large_url'     : 'http://i.imgur.com/Sdi2375.jpg',
             'pos'           : '40% 65%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -215,8 +209,8 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/p0Mp7EM.jpg',
-            'large_url'     : 'http://i.imgur.com/ibjkPYQ.jpg',
+            'url'           : 'http://i.imgur.com/1lHx1q7.jpg',
+            'large_url'     : 'http://i.imgur.com/AUbSjGX.jpg',
             'pos'           : '70% 32%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -229,8 +223,7 @@ angular.module("nodeTodo", ['ngTouch'])
 
     $scope.images = [
         {
-            'url'           : 'http://i.imgur.com/WDTavoX.jpg',
-            'large_url'           : 'http://i.imgur.com/WDTavoX.jpg',
+            'url'           : 'http://i.imgur.com/KvBXvH1.jpg',
             'pos'           : '25% 20%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -239,8 +232,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/fwXjPPZ.jpg',
-            'large_url'           : 'http://i.imgur.com/fwXjPPZ.jpg',
+            'url'           : 'http://i.imgur.com/PNU1CK2.jpg',
             'pos'           : '12% 80%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -249,8 +241,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/HLxE16q.jpg',
-            'large_url'           : 'http://i.imgur.com/HLxE16q.jpg',
+            'url'           : 'http://i.imgur.com/IKTvzyE.jpg',
             'pos'           : '90% 80%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -259,8 +250,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/jUTPp8x.jpg',
-            'large_url'           : 'http://i.imgur.com/jUTPp8x.jpg',
+            'url'           : 'http://i.imgur.com/lG0RfGv.jpg',
             'pos'           : '100% 80%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
@@ -269,7 +259,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2014'
         },
         {
-            'url'           : 'http://i.imgur.com/sAHFNQ0.jpg',
+            'url'           : 'http://i.imgur.com/OrJraur.jpg',
             'large_url'     : 'http://i.imgur.com/vcbx2ec.jpg',
             'pos'           : '35% 30%',
             'size'          : 'cover',
@@ -279,8 +269,8 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2013'
         },
         {
-            'url'           : 'http://i.imgur.com/x3JLURh.jpg',
-            'large_url'     : 'http://i.imgur.com/0sFLQch.jpg',
+            'url'           : 'http://i.imgur.com/VuAo5o6.jpg',
+            'large_url'     : 'http://i.imgur.com/GvhYAUm.jpg',
             'pos'           : '30% 60%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',

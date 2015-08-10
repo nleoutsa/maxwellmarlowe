@@ -1,11 +1,14 @@
 
 $(document).ready(function() {
 
-    var column_width = $("#col0").width() - $(window).width();
-    console.log(column_width);
-    $(".out-col-0").scrollLeft(column_width / 8);
-    // $(".out-col-2").scrollLeft(column_width);
-    $(".out-col-3").scrollLeft(column_width / 2.4);
+    var row_width = $("#col0").width() - $(window).width();
+    var column_height = $("#col0").height() - $(window).height();
+    $(".out-col-0").scrollLeft(row_width / 8);
+    $(".out-col-0").scrollTop(column_height / 8);
+    // $(".out-col-2").scrollLeft(row_width);
+    // $(".out-col-2").scrollTop(column_height);
+    $(".out-col-3").scrollLeft(row_width / 2.4);
+    $(".out-col-3").scrollTop(column_height / 2.4);
 });
 
 window.addEventListener("orientationchange", function() {
