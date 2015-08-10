@@ -304,36 +304,36 @@ angular.module("nodeTodo", ['ngTouch'])
         }
     ];
 
-    // Get all todos
-    $http.get('api/v1/todos')
-        .success(function(data) {
-            $scope.todoData = data;
-        })
-        .error(function(error) {
-            console.log("Error: " + error);
-        });
+    // // Get all todos
+    // $http.get('api/v1/todos')
+    //     .success(function(data) {
+    //         $scope.todoData = data;
+    //     })
+    //     .error(function(error) {
+    //         console.log("Error: " + error);
+    //     });
 
-    $scope.createTodo = function(todoID) {
+    // $scope.createTodo = function(todoID) {
 
-        // Create a todo
-        $http.post('api/v1/todos', $scope.formData)
-            .success(function(data) {
-                $scope.formData = {};
-                $scope.todoData = data;
-            })
-            .error(function(error) {
-                console.log("Error: " + error);
-            });
-    };
+    //     // Create a todo
+    //     $http.post('api/v1/todos', $scope.formData)
+    //         .success(function(data) {
+    //             $scope.formData = {};
+    //             $scope.todoData = data;
+    //         })
+    //         .error(function(error) {
+    //             console.log("Error: " + error);
+    //         });
+    // };
 
-    $scope.deleteTodo = function(todoID) {
-        // Delete a todo
-        $http.delete('api/v1/todos/' + todoID)
-            .success(function(data) {
-                $scope.todoData = data;
-            })
-            .error(function(error) {
-                console.log("Error: " + error);
-            });
-    };
+    // $scope.deleteTodo = function(todoID) {
+    //     // Delete a todo
+    //     $http.delete('api/v1/todos/' + todoID)
+    //         .success(function(data) {
+    //             $scope.todoData = data;
+    //         })
+    //         .error(function(error) {
+    //             console.log("Error: " + error);
+    //         });
+    // };
 });
