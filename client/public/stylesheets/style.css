@@ -540,6 +540,10 @@ li {
 #my_details {
 }
 
+.category_labels {
+  visibility: hidden;
+}
+
 #label_web {
   position: absolute;
   z-index: 9;
@@ -699,6 +703,10 @@ li {
     width: 25vw;
     top: 0;
   }
+
+.category_labels {
+  visibility: visible;
+}
 
   #label_web {
     width: 25vw;
