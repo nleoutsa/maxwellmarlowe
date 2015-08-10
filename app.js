@@ -9,8 +9,7 @@ var routes = require('./server/routes/index');
 
 var app = express();
 
-
-var port = process.env.PORT || 5000;
+app.set('port', (process.env.PORT || 5000));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -35,31 +34,32 @@ app.use(function(req, res, next) {
 
 // error handlers
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
+// // development error handler
+// // will print stacktrace
+// if (app.get('env') === 'development') {
+//   app.use(function(err, req, res, next) {
+//     res.status(err.status || 500);
+//     res.render('error', {
+//       message: err.message,
+//       error: err
+//     });
+//   });
+// }
 
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+// // production error handler
+// // no stacktraces leaked to user
+// app.use(function(err, req, res, next) {
+//   res.status(err.status || 500);
+//   res.render('error', {
+//     message: err.message,
+//     error: {}
+//   });
+// });
+
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
 
-
-app.listen(port, function() {
-    console.log('Our app is running on http://localhost:' + port);
-});
 
 module.exports = app;
