@@ -517,10 +517,19 @@ li {
   border: none;
 }
 
+
+
+
+
 /* my info section */
+
 #col1 {
   top: 25vh;
-  background-color: #222;
+  background-color: #101213;
+  background: -webkit-linear-gradient(190deg, #111, #222); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(190deg, #111, #222); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(190deg, #111, #222); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(190deg, #111, #222); /* Standard syntax */
   color: #fff;
   text-align: center;
 }
@@ -528,17 +537,55 @@ li {
 #col1_text {
   font-weight: 100;
   height: 100%;
+  padding: 1em;
 }
 .my_name {
   padding: 0.3em 0.3em;
   font-size: 1.3em;
   text-align: center;
+  line-height: 1.3em;
 }
-.my_name span {
-  padding: 0 0.5em;
+.my_name p:last-child {
+  font-size: 0.8em;
+  margin: 0.5em auto;
+  color: hsl(120, 20%, 90%);
 }
-#my_details {
+
+
+#my_details a:link,
+#my_details a:visited,
+#my_details a {
+  display: inline-block;
+  width: 48%;
+  margin-top: 0.5em;
+  text-decoration: none;
 }
+#my_details a:hover {
+  color: #33eebb;
+}
+
+
+#bio {
+  color: hsl(120, 40%, 85%);
+}
+#github {
+  color: hsl(120, 60%, 80%);
+}
+#linked_in {
+  color: hsl(120, 80%, 75%);
+}
+#angel_list {
+  color: hsl(120, 80%, 73%);
+}
+
+
+
+
+
+
+
+
+/* labels */
 
 .category_labels {
   visibility: hidden;
@@ -703,6 +750,26 @@ li {
     width: 25vw;
     top: 0;
   }
+
+
+/*  */
+
+.my_name p:last-child {
+  margin: 2em auto;
+}
+
+
+#my_details a:link,
+#my_details a:visited,
+#my_details a {
+  display: inline-block;
+  width: 100%;
+  margin-top: 2em;
+}
+
+
+
+
 
 .category_labels {
   visibility: visible;
