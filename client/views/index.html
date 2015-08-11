@@ -30,7 +30,7 @@
           <img id="zoomed_pic" ng-src="{{album[pic_number].url}}" alt="{{album[pic_number].title}} by Nick Leoutsakos">
 
           <div class="zoom_btns">
-            <span id="left_btn" ng-click="showPhoto(-1);">
+            <span id="left_btn" ng-click="showPhoto(-1); super_zoom = !super_zoom;">
               <i class="zoom_btn fa fa-chevron-circle-left"></i>
             </span>
 
@@ -38,7 +38,7 @@
               <i ng-click="zoom = false; super_zoom = false;" class="zoom_btn fa fa-times-circle"></i>
             </span>
 
-            <span id="right_btn" ng-click="showPhoto(1);">
+            <span id="right_btn" ng-click="showPhoto(1); super_zoom = !super_zoom;">
               <i class="zoom_btn fa fa-chevron-circle-right"></i>
             </span>
           </div>

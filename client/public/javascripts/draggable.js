@@ -369,6 +369,9 @@ $('.draggable').bind('mouseup', throwClick);
 
 // style buttons of side: color; positioning?;
 
+// style about me column... make responsive!
+
+// left/right arrows also go to super_zoom
 
 
 
