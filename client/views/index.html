@@ -22,15 +22,15 @@
       <div ng-show="zoom" id="zoomed">
         <div id="super_zoomed_background" ng-show="super_zoom">
           <div class="draggable" id="super_zoomed_container" >
-            <img id="super_zoomed_pic" ng-src="{{album[pic_number].large_url || album[pic_number].url}}" alt="{{album[pic_number].title}} by Nick Leoutsakos">
+            <img id="super_zoomed_pic" ng-src="{{album[pic_number].large_url || album[pic_number].url}}" alt="{{album[pic_number].title}} by Nick Leoutsakos" ng-click="super_zoom=false;">
           </div>
         </div>
         <div class="draggable" id="zoomed_container">
 
-          <img id="zoomed_pic" ng-src="{{album[pic_number].url}}" alt="{{album[pic_number].title}} by Nick Leoutsakos">
+          <img id="zoomed_pic" ng-src="{{album[pic_number].url}}" alt="{{album[pic_number].title}} by Nick Leoutsakos" ng-click="super_zoom = true;">
 
           <div class="zoom_btns">
-            <span id="left_btn" ng-click="showPhoto(-1); super_zoom = !super_zoom;">
+            <span id="left_btn" ng-click="showPhoto(-1);">
               <i class="zoom_btn fa fa-chevron-circle-left"></i>
             </span>
 
@@ -38,7 +38,7 @@
               <i ng-click="zoom = false; super_zoom = false;" class="zoom_btn fa fa-times-circle"></i>
             </span>
 
-            <span id="right_btn" ng-click="showPhoto(1); super_zoom = !super_zoom;">
+            <span id="right_btn" ng-click="showPhoto(1);">
               <i class="zoom_btn fa fa-chevron-circle-right"></i>
             </span>
           </div>
@@ -67,7 +67,7 @@
 
       <div class="outer-column out-col-0">
         <ul id="col0">
-          <li ng-repeat="pic in paintings" ng-click="$parent.zoom = true; $parent.super_zoom = !$parent.super_zoom; $parent.pic_number = $index; $parent.album = paintings;" class="pic" ng-style="{
+          <li ng-repeat="pic in paintings" ng-click="$parent.zoom = true; $parent.super_zoom = false; $parent.pic_number = $index; $parent.album = paintings;" class="pic" ng-style="{
             'background-image': 'url({{pic.url}})',
             'background-size': '{{pic.size}}',
             'background-repeat': '{{pic.repeat}}',
@@ -105,7 +105,7 @@
 
       <div class="outer-column out-col-2">
         <ul id="col2">
-          <li ng-repeat="pic in web_portfolio" ng-click="$parent.zoom = true; $parent.super_zoom = !$parent.super_zoom; $parent.pic_number = $index; $parent.album = web_portfolio;" class="pic" ng-style="{
+          <li ng-repeat="pic in web_portfolio" ng-click="$parent.zoom = true; $parent.super_zoom = false; $parent.pic_number = $index; $parent.album = web_portfolio;" class="pic" ng-style="{
             'background-image': 'url({{pic.url}})',
             'background-size': '{{pic.size}}',
             'background-repeat': '{{pic.repeat}}',
@@ -117,7 +117,7 @@
 
       <div class="outer-column out-col-3">
         <ul id="col3">
-          <li ng-repeat="pic in images" ng-click="$parent.zoom = true; $parent.super_zoom = !$parent.super_zoom; $parent.pic_number = $index; $parent.album = images;" class="pic" ng-style="{
+          <li ng-repeat="pic in images" ng-click="$parent.zoom = true; $parent.super_zoom = false; $parent.pic_number = $index; $parent.album = images;" class="pic" ng-style="{
             'background-image': 'url({{pic.url}})',
             'background-size': '{{pic.size}}',
             'background-repeat': '{{pic.repeat}}',
@@ -128,9 +128,9 @@
       </div>
 
 
-      <p class="category_labels" id="label_web" ng-click="zoom = true; super_zoom = !super_zoom; pic_number = 0; album = web_portfolio;">Oil, Acrylic, and Digital Painting</p>
-      <p class="category_labels" id="label_painting" ng-click="zoom = true; super_zoom = !super_zoom; pic_number = 0; album = paintings;">Web Development and Design</p>
-      <p class="category_labels" id="label_3d" ng-click="zoom = true; super_zoom = !super_zoom; pic_number = 0; album = images;">3D Modeling and Woodwork</p>
+      <p class="category_labels" id="label_web" ng-click="zoom = true; super_zoom = false; pic_number = 0; album = web_portfolio;">Oil, Acrylic, and Digital Painting</p>
+      <p class="category_labels" id="label_painting" ng-click="zoom = true; super_zoom = false; pic_number = 0; album = paintings;">Web Development and Design</p>
+      <p class="category_labels" id="label_3d" ng-click="zoom = true; super_zoom = false; pic_number = 0; album = images;">3D Modeling and Woodwork</p>
 
 
 
