@@ -5,6 +5,7 @@ angular.module("nodeTodo", ['ngTouch'])
     $scope.formData = {};
     $scope.todoData = {};
 
+
     // show next of previous photo and loop
     $scope.showPhoto = function(direction) {
         if (direction < 0) {

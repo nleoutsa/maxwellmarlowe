@@ -228,9 +228,7 @@ var throwClick = function(e) {
 // auto scroll when user is not interacting
 var autoMove = function(id, speed) {
 
-
     var paused = false;
-    var num_of_pics = ($(id).children().length);
     var timer;
 
     var new_left;
@@ -259,7 +257,7 @@ var autoMove = function(id, speed) {
 
         timer = setInterval(function () {
 
-            if ($(window).width() <= 500) {
+            if ($(window).width() <= $(window).height()) {
 
                 row_width = $(id).width() - $(window).width();
 
@@ -270,11 +268,12 @@ var autoMove = function(id, speed) {
 
                 new_left = $(id).position().left + (1 * auto_move_direction_left);
 
+
                 if (!paused) {
                     $(id).parent().scrollLeft(-new_left);
                 }
             }
-            else if ($(window).width() > 500) {
+            else if ($(window).width() > $(window).height()) {
 
                 column_height = $(id).height() - $(window).height();
 
@@ -328,15 +327,12 @@ var autoMove = function(id, speed) {
 
 
 
-
-
 // run on load:
 
 
 // window.addEventListener("orientationchange", function() {
     // on orientation change do this...
 // }, false);
-
 
 setTimeout(function() {
     autoMove("#col2", 30);
@@ -371,7 +367,7 @@ $('.draggable').bind('mouseup', throwClick);
 
 // style about me column... make responsive!
 
-// left/right arrows also go to super_zoom
+// left/right arrows also go to super_zoom...
 
 
 
