@@ -21,7 +21,12 @@
 
       <div ng-show="zoom" id="zoomed">
         <div id="super_zoomed_background" ng-show="super_zoom">
+            <span id="x-out-super_zoom">
+              <i ng-click="super_zoom = false;" class="fa fa-times-circle"></i>
+            </span>
           <div class="draggable" id="super_zoomed_container" >
+
+
             <img id="super_zoomed_pic" ng-src="{{album[pic_number].large_url || album[pic_number].url}}" alt="{{album[pic_number].title}} by Nick Leoutsakos" ng-click="super_zoom=false;">
           </div>
         </div>
@@ -128,8 +133,8 @@
       </div>
 
 
-      <p class="category_labels" id="label_web" ng-click="zoom = true; super_zoom = false; pic_number = 0; album = web_portfolio;">Oil, Acrylic, and Digital Painting</p>
-      <p class="category_labels" id="label_painting" ng-click="zoom = true; super_zoom = false; pic_number = 0; album = paintings;">Web Development and Design</p>
+      <p class="category_labels" id="label_web" ng-click="zoom = true; super_zoom = false; pic_number = 0; album = paintings;">Oil, Acrylic, and Digital Painting</p>
+      <p class="category_labels" id="label_painting" ng-click="zoom = true; super_zoom = false; pic_number = 0; album = web_portfolio;">Web Development and Design</p>
       <p class="category_labels" id="label_3d" ng-click="zoom = true; super_zoom = false; pic_number = 0; album = images;">3D Modeling and Woodwork</p>
 
 

@@ -441,6 +441,21 @@ li {
 }
 
 
+#x-out-super_zoom {
+  text-align: right;
+  z-index: 999999999999999;
+  font-size: 2em;
+  margin: 0;
+  line-height: 1.5em;
+  padding-right: 1em;
+  position: absolute;
+  color: #E059C7;
+  background-color: rgba(0,0,0,0.5);
+
+
+
+  width: 100vw;
+}
 
 
 

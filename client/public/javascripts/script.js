@@ -88,7 +88,7 @@ var skill = function(ary) {
             console.log($(window).height());
 
             if (!stop_appending) {
-               $("#skills").append("<p style='color: hsl(" + 360 / (num_skills - 1) * current_skill + ", 80%, 70%)'>" + ary[current_skill] + "</p>")
+               $("#skills").append("<p style='color: hsl(" + 360 / (num_skills - 1) * current_skill + ", 80%, 83%)'>" + ary[current_skill] + "</p>")
             }
 
         }
