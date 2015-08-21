@@ -21,16 +21,26 @@
 
       <div ng-show="zoom" id="zoomed">
         <div id="super_zoomed_background" ng-show="super_zoom">
-            <span id="x-out-super_zoom">
-              <i ng-click="super_zoom = false;" class="fa fa-times-circle"></i>
-            </span>
+          <span id="x-out-super_zoom">
+            <i ng-click="super_zoom = false;" class="fa fa-times-circle"></i>
+          </span>
           <div class="draggable" id="super_zoomed_container" >
+
 
 
             <img id="super_zoomed_pic" ng-src="{{album[pic_number].large_url || album[pic_number].url}}" alt="{{album[pic_number].title}} by Nick Leoutsakos" ng-click="super_zoom=false;">
           </div>
         </div>
+
         <div class="draggable" id="zoomed_container">
+
+          <div id="album_thumbnails">
+            <ul>
+              <li ng-repeat="thumb in {{album}}">
+                <img ng-src="{{paintings[0].url}}">
+              </li>
+            </ul>
+          </div>
 
           <img id="zoomed_pic" ng-src="{{album[pic_number].url}}" alt="{{album[pic_number].title}} by Nick Leoutsakos" ng-click="super_zoom = true;">
 

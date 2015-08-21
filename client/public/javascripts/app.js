@@ -60,6 +60,18 @@ angular.module("nodeTodo", ['ngTouch'])
             'date'          : '2015'
         },
         {
+            'url'           : 'http://i.imgur.com/3EoCnLv.png',
+            'name'          : 'electronic_LIFE',
+            'pos'           : '70% 10%',
+            'size'          : 'cover',
+            'repeat'        : 'no-repeat',
+            'title'         : 'electronic LIFE',
+            'description'   : 'A vanilla JavaScript simulation pitting herbivores, carnivores, and plants against eachother in a game of natural selection. Who will win? Watch populations grow and fall! Witness herds thrive! Mourn the extinction of entire species!',
+            'medium'        : 'JavaScript, HTML5, CSS3',
+            'redirect'      : 'https://electronic-life.bitballoon.com',
+            'date'          : '2015'
+        },
+        {
             'url'           : 'http://i.imgur.com/WgwHekG.jpg',
             'name'          : 'cities',
             'pos'           : '70% 10%',
