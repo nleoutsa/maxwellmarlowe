@@ -24,6 +24,17 @@ angular.module("nodeTodo", ['ngTouch'])
 
     $scope.web_portfolio = [
         {
+            'name'          : 'violin',
+            'url'           : 'http://i.imgur.com/kfpjNWX.png',
+            'pos'           : '0% 0%',
+            'size'          : 'cover',
+            'repeat'        : 'no-repeat',
+            'title'         : 'Violin',
+            'description'   : 'A fun little experimental vanilla JavaScript platform game with a night-day system and player shadow.',
+            'medium'        : 'JavaScript, HTML5, CSS3',
+            'redirect'      : 'http://violin.bitballoon.com/',
+            'date'          : '09 2015'
+        },{
             'name'          : 'arbitrage_landing',
             'url'           : 'http://i.imgur.com/6glD8Yj.jpg',
             'pos'           : '0% 0%',
