@@ -26,7 +26,7 @@ angular.module("nodeTodo", ['ngTouch'])
         {
             'name'          : 'violin',
             'url'           : 'http://i.imgur.com/kfpjNWX.png',
-            'pos'           : '0% 0%',
+            'pos'           : '55% 0%',
             'size'          : 'cover',
             'repeat'        : 'no-repeat',
             'title'         : 'Violin',
