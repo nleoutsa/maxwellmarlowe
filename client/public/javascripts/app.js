@@ -32,7 +32,7 @@ angular.module("nodeTodo", ['ngTouch'])
             'title'         : 'Violin',
             'description'   : 'A fun little experimental vanilla JavaScript platform game with a night-day system and player shadow.',
             'medium'        : 'JavaScript, HTML5, CSS3',
-            'redirect'      : 'http://violin.bitballoon.com/',
+            'redirect'      : 'http://violin.netlify.com/',
             'date'          : '09 2015'
         },{
             'name'          : 'arbitrage_landing',
